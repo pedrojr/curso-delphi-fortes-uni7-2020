@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
-  Vcl.StdCtrls;
+  Vcl.StdCtrls, Vcl.Mask;
 
 type
   TFrmPrincipal = class(TForm)
@@ -16,6 +16,7 @@ type
     MemParcelas: TMemo;
     BtnCalcular: TButton;
     procedure BtnCalcularClick(Sender: TObject);
+    procedure EdtValorVendaKeyPress(Sender: TObject; var Key: Char);
   private
     { Private declarations }
   public
@@ -27,11 +28,39 @@ var
 
 implementation
 
+uses
+  LibCalculos;
+
 {$R *.dfm}
 
-procedure TFrmPrincipal.BtnCalcularClick(Sender: TObject);
+procedure TFrmPrincipal.EdtValorVendaKeyPress(Sender: TObject; var Key: Char);
 begin
-  //todo
+  if not CharInSet(Key, ['0'..'9', ',', Chr(8)]) then
+    Key := #0;
+end;
+
+procedure TFrmPrincipal.BtnCalcularClick(Sender: TObject);
+var
+  ValorDaVenda: Double;
+  TotalDeParcelas: Byte;
+  ValorDaParcela: Double;
+  ValorFaltante: Double;
+begin
+  MemParcelas.Clear;
+
+  ValorDaVenda := StrToFloat(EdtValorVenda.Text);
+  TotalDeParcelas := StrToInt(EdtParcelas.Text);
+
+  ValorDaParcela := ValorExato(ValorDaVenda / TotalDeParcelas);
+  ValorFaltante := ValorExato(ValorDaVenda - (ValorDaParcela * TotalDeParcelas), 3);
+
+  if ValorFaltante > 0 then
+  begin
+    MemParcelas.Lines.Add(IntToStr(TotalDeParcelas -1) +' x '+ FloatToStr(ValorDaParcela));
+    MemParcelas.Lines.Add('1 x '+ FloatToStrF(ValorDaParcela + ValorFaltante, ffCurrency, 8, 2));
+  end
+  else
+    MemParcelas.Lines.Add(IntToStr(TotalDeParcelas) +' x '+ FloatToStr(ValorDaParcela));
 end;
 
 end.

@@ -2,7 +2,8 @@ program ValorParcelas;
 
 uses
   Vcl.Forms,
-  Principal in 'Principal.pas' {FrmPrincipal};
+  Principal in 'Principal.pas' {FrmPrincipal},
+  LibCalculos in 'LibCalculos.pas';
 
 {$R *.res}
 

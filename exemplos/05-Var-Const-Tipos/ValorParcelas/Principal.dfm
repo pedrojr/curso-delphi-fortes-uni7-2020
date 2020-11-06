@@ -32,25 +32,7 @@ object FrmPrincipal: TFrmPrincipal
     Top = 56
     Width = 329
     Height = 217
-    Lines.Strings = (
-      '10 x 50,00')
-    TabOrder = 0
-  end
-  object EdtValorVenda: TEdit
-    Left = 8
-    Top = 29
-    Width = 121
-    Height = 21
-    TabOrder = 1
-    Text = '500,00'
-  end
-  object EdtParcelas: TEdit
-    Left = 135
-    Top = 29
-    Width = 121
-    Height = 21
-    TabOrder = 2
-    Text = '10'
+    TabOrder = 3
   end
   object BtnCalcular: TButton
     Left = 262
@@ -58,7 +40,26 @@ object FrmPrincipal: TFrmPrincipal
     Width = 75
     Height = 25
     Caption = 'Calcular'
-    TabOrder = 3
+    TabOrder = 2
     OnClick = BtnCalcularClick
+  end
+  object EdtParcelas: TEdit
+    Left = 135
+    Top = 29
+    Width = 121
+    Height = 21
+    MaxLength = 2
+    NumbersOnly = True
+    TabOrder = 1
+    Text = '9'
+  end
+  object EdtValorVenda: TEdit
+    Left = 8
+    Top = 29
+    Width = 121
+    Height = 21
+    TabOrder = 0
+    Text = '575,00'
+    OnKeyPress = EdtValorVendaKeyPress
   end
 end
