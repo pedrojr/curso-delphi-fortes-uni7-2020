@@ -2,7 +2,7 @@
 Debugging
 Marcar Breakpoint na linha selecionada: F5 (ou clicando do lado esquerdo do número da linha)
 Executar/Continuar a aplicação em modo debug: F9
-Executar subrotinas da linha atual: F7
+Executar sub-rotinas na linha atual: F7
 Executar a linha atual: F8
 
 Code Completion: Ctrl + Barra de Espaço
@@ -11,7 +11,7 @@ Code Parameters: Ctrl + Shift + Barra de Espaço
 Indentar linhas selecionadas: Ctrl + Shift + I
 Recuar linhas selecionadas: Ctrl + Shift + U
 
-Ir para uma iplementação: Ctrl + Clique Mouse
+Ir para uma implementação: Ctrl + Clique Mouse
 
 Se movimentar entre declaração de procedure/função e a implementação: Ctrl + Shift + Seta para cima ou Seta para baixo
 
