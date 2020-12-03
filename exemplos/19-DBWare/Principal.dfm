@@ -42,6 +42,7 @@ object FrmPrincipal: TFrmPrincipal
       end
       object CadFuncionarios: TMenuItem
         Caption = 'Funcion'#225'rios'
+        OnClick = CadFuncionariosClick
       end
       object N1: TMenuItem
         Caption = '-'

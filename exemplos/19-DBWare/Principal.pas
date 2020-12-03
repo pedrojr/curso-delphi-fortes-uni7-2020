@@ -51,6 +51,7 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure CadEventosClick(Sender: TObject);
     procedure CadCargosClick(Sender: TObject);
+    procedure CadFuncionariosClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -63,7 +64,7 @@ var
 implementation
 
 uses
-  Conexao, CadCargos, CadEventos;
+  Conexao, CadCargos, CadEventos, CadFuncionarios, CadFuncionarios2;
 
 {$R *.dfm}
 
@@ -89,6 +90,13 @@ begin
   FrmEventos := TFrmEventos.Create(Self);
   FrmEventos.ShowModal;
   FrmEventos.Free;
+end;
+
+procedure TFrmPrincipal.CadFuncionariosClick(Sender: TObject);
+begin
+  FrmFuncionarios2 := TFrmFuncionarios2.Create(Self);
+  FrmFuncionarios2.ShowModal;
+  FrmFuncionarios2.Free;
 end;
 
 procedure TFrmPrincipal.SairClick(Sender: TObject);

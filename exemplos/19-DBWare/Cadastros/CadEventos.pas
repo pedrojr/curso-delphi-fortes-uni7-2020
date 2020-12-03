@@ -51,8 +51,8 @@ end;
 
 procedure TFrmEventos.BtnBuscaClick(Sender: TObject);
 begin
-  if QryEventos.FindKey([EdtBusca.Text]) then
-  //if QryEventos.Locate('DESCRICAO', EdtBusca.Text, [loCaseInsensitive, loPartialKey]) then
+  //if QryEventos.FindKey([EdtBusca.Text]) then
+  if QryEventos.Locate('DESCRICAO', EdtBusca.Text, [loCaseInsensitive, loPartialKey]) then
   //if QryEventos.Locate('CODIGO,NOME', VarArrayof([EdtID.Text, EdtNome.Text]), [loCaseInsensitive]) then
     PageControl1.ActivePage := TabSheet2
   else

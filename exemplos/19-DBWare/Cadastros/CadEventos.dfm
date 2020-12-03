@@ -24,8 +24,6 @@ object FrmEventos: TFrmEventos
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = 'Lista'
-      ExplicitWidth = 653
-      ExplicitHeight = 345
       object DBGrid1: TDBGrid
         Left = 3
         Top = 0
@@ -59,10 +57,6 @@ object FrmEventos: TFrmEventos
     object TabSheet2: TTabSheet
       Caption = 'Registro'
       ImageIndex = 1
-      ExplicitLeft = 0
-      ExplicitTop = 28
-      ExplicitWidth = 647
-      ExplicitHeight = 382
       object Label1: TLabel
         Left = 32
         Top = 64
@@ -122,8 +116,6 @@ object FrmEventos: TFrmEventos
         DataSource = DtsEventos
         Align = alTop
         TabOrder = 3
-        ExplicitTop = 1
-        ExplicitWidth = 647
       end
     end
   end
