@@ -109,14 +109,35 @@
             <Form>FrmEventos</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="Cadastros\CadFuncionarios.pas">
-            <Form>FrmFuncionarios</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
         <DCCReference Include="Cadastros\CadFuncionarios2.pas">
             <Form>FrmFuncionarios2</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Patterns\CadPadrao.pas">
+            <Form>FrmCadPadrao</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Cadastros\CadFuncionarios3.pas">
+            <Form>FrmFuncionarios3</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Cadastros\CadFuncionarios.pas">
+            <Form>FrmFuncionarios</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Relatorios\RelFuncionarios.pas">
+            <Form>FrmRelFuncionarios</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Relatorios\RelFuncionariosCfg.pas">
+            <Form>FrmRelFuncionariosCfg</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Processos\ProcFolha.pas">
+            <Form>FrmFolha</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Core\CalcInss.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

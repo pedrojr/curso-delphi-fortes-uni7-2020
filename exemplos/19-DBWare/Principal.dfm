@@ -80,6 +80,7 @@ object FrmPrincipal: TFrmPrincipal
       end
       object RelFuncionarios: TMenuItem
         Caption = 'Funcion'#225'rios'
+        OnClick = RelFuncionariosClick
       end
     end
     object Sair1: TMenuItem

@@ -43,6 +43,15 @@ begin
     FAppPath := ExtractFilePath(Application.ExeName);
     Connection.Params.Database := FAppPath + 'DADOS.FDB';
     Connection.Connected := True;
+    //Exemplo de configuração via código
+    //Connection.DriverName := 'FB';
+    //Connection.LoginPrompt := False;
+    //Connection.Params.Database := 'C:\Projetos\DADOS.FDB';
+    //Connection.Params.UserName := 'SYSDBA';
+    //Connection.Params.Password := 'masterkey';
+    //Connection.Params.Values['Server'] := 'localhost';
+    //Connection.Params.Values['Port'] := '3050';
+    //Connection.Connected := True;
   except
     ShowMessage('Falha ao iniciar a aplicação.');
     Application.Terminate;

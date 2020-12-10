@@ -11,7 +11,7 @@ Requisitos: Criar um sistema para calcular a folha de pagamentos de uma empresa.
 	- Registrar mudança de salário
 	- Lançar evento para funcionário(s)
 	- Tela de processamento de folha: calcular/recalcular folha de pagamentos para um mês informado.
-		* Pegar o salário base
+		* Consultar dados dos funcionários ativos
 		* Calcular INSS
 		* Calcular IRRF
 		* Verificar Eventos para o mês
@@ -52,6 +52,7 @@ type
     procedure CadEventosClick(Sender: TObject);
     procedure CadCargosClick(Sender: TObject);
     procedure CadFuncionariosClick(Sender: TObject);
+    procedure RelFuncionariosClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -64,7 +65,9 @@ var
 implementation
 
 uses
-  Conexao, CadCargos, CadEventos, CadFuncionarios, CadFuncionarios2;
+  Conexao, CadCargos, CadEventos,
+  CadFuncionarios, CadFuncionarios2, CadFuncionarios3,
+  RelFuncionariosCfg;
 
 {$R *.dfm}
 
@@ -94,9 +97,16 @@ end;
 
 procedure TFrmPrincipal.CadFuncionariosClick(Sender: TObject);
 begin
-  FrmFuncionarios2 := TFrmFuncionarios2.Create(Self);
-  FrmFuncionarios2.ShowModal;
-  FrmFuncionarios2.Free;
+  FrmFuncionarios3 := TFrmFuncionarios3.Create(Self);
+  FrmFuncionarios3.ShowModal;
+  FrmFuncionarios3.Free;
+end;
+
+procedure TFrmPrincipal.RelFuncionariosClick(Sender: TObject);
+begin
+  FrmRelFuncionariosCfg := TFrmRelFuncionariosCfg.Create(Self);
+  FrmRelFuncionariosCfg.ShowModal;
+  FrmRelFuncionariosCfg.Free;
 end;
 
 procedure TFrmPrincipal.SairClick(Sender: TObject);
